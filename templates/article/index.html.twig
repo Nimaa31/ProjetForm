@@ -1,0 +1,26 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Liste des Article{% endblock %}
+
+{% block body %}
+ <div class='d-flex flex-wrap justify-content-around'>
+{% for Article in article %}
+<div class="card m-3 w-25 h-50">
+  <h3 class="card-header">{{Article.titreArticle}}</h3>
+  <div class="card-body">
+    <h5 class="card-title">Description :</h5>
+    <h6 class="card-subtitle text-muted">{{Article.descriptionArticle}}</h6>
+  </div>
+    <div class="card-body">
+  <img  src="{{Article.imageArticle}}"  alt="photo de {{Article.titreArticle}}">
+  </div>
+  <div class="card-body">
+    <p class="card-text">Prix : {{Article.prixArticle}} </p>
+  </div>
+    <div class="card-body">
+     <button type="submit">Ajouter au panier</button>
+    </div>
+</div>
+{% endfor %}
+</div>
+{% endblock %}

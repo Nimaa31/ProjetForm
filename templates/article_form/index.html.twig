@@ -1,0 +1,21 @@
+{% extends 'base.html.twig' %}
+
+{% block title %}Hello ArticleFormController!{% endblock %}
+
+{% block body %}
+ {{ form_start(form) }}
+ {{ form_label(form.titre_article) }}
+ {{ form_widget(form.titre_article) }} <br>
+{{ form_label(form.prix_article) }}
+ {{ form_widget(form.prix_article) }}<br>
+ {{ form_label(form.description_article) }}
+ {{ form_widget(form.description_article) }}<br>
+ {{ form_label(form.date_article) }}
+ {{ form_widget(form.date_article) }}<br>
+  {{ form_label(form.image_article) }}
+ {{ form_widget(form.image_article) }}<br>
+ {{ form_rest(form) }}
+ <button type="submit">Enregistrer</button>
+ {{ form_end(form) }}
+
+{% endblock %}
